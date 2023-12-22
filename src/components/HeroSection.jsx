@@ -1,4 +1,4 @@
-import video from '../videos/video2.mp4';
+import video from '../videos/Compilation.mp4';
 import {Button} from './Button';
 import './HeroSection.css';
 import '../App.css'
