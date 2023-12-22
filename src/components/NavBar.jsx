@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Navbar.css';
 
 function Navbar() {
@@ -28,7 +28,10 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='' className='navbar-logo' onClick={() => {
+            closeMobileMenu()
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}>
             £nternal
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -36,22 +39,22 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='#bio' className='nav-links' onClick={closeMobileMenu}>
                 Who am I?
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='/services'
+                to='#projects'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                smooth
               >
                 Projects
               </Link>
             </li>
             <li>
               <Link
-                to='/resume'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
@@ -67,3 +70,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

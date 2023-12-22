@@ -6,7 +6,7 @@ import '../App.css'
 function HeroSection() {
     return (
         <>
-            <div className = 'hero-container'>
+            <div className = 'hero-container' id='top'>
                 <video src = {video} autoPlay loop muted></video>
                 <h1>Marvin Jirapongsuwan</h1>
                 <p>Computer Science Undergraduate</p>
