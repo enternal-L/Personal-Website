@@ -123,4 +123,7 @@ h1 {
   .cards__item {
     margin-bottom: 2rem;
   }
+  .cards{
+    padding: 4rem;
+  }
 }

@@ -27,7 +27,7 @@ export default function App(){
 // To Do:
 // get resume file download to work
 // infinite carousel in cards section
-// bio page --> use paralax for bio text
+// bio page --> use paralax for bio text DONE
 // change react-router-dom to window scroll to DONE
 // Add Some text effects for herosection DONE
 // Clear unneeded css

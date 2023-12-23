@@ -18,6 +18,8 @@ function ImageSlider({ slides }){
                         else{
                             setIndex(Index + 1);
                         }
+
+                        
                     }} style={{objectPosition: `0 ${slides[Index][1]}`}}></img>
                 </div>
             </div>
