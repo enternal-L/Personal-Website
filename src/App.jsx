@@ -27,8 +27,9 @@ export default function App(){
 // To Do:
 // get resume file download to work
 // infinite carousel in cards section
-// bio page
-// change react-router-dom to window scroll to
-// Add Some text effects for herosection
+// bio page --> use paralax for bio text
+// change react-router-dom to window scroll to DONE
+// Add Some text effects for herosection DONE
 // Clear unneeded css
+// Work on phone media screen, too much spacing between iamge and project section
 
