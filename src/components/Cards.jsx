@@ -6,7 +6,7 @@ import './Cards.css';
 function Cards() {
   return (
     <div className='cards' id='projects'>
-      <h1>Projects I worked on</h1>
+      <h1 className = 'cards__title'>Projects I worked on</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -27,13 +27,13 @@ function Cards() {
             <CardItem
                 src=  {Placeholder}
                 text="Stopwatch-in-JS"
-                label='Software'
+                label='Website'
                 path='https://enternal-l.github.io/Stopwatch-in-JS/'
               />
             <CardItem
               src=  {Placeholder}
-              text='Placeholder'
-              label='PlaceHolder'
+              text='Feel The Heat'
+              label='Website'
               path='/'
             />
           </ul>

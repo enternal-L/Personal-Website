@@ -1,3 +1,13 @@
+@keyframes slideDown {
+    from {
+        transform: translateY(-14px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
 video {
     object-fit: cover;
     width: 100%;
@@ -17,7 +27,7 @@ video {
     object-fit: contain;
 }
 
-.hero-container > h1{
+.hero-container > h1 {
     color: #fff;
     font-size: 100px;
     margin-top: -100px;

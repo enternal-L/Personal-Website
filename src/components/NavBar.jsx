@@ -28,7 +28,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='' className='navbar-logo' onClick={() => {
+          <Link className='navbar-logo' onClick={() => {
             closeMobileMenu()
             window.scrollTo({ top: 0, behavior: 'smooth' })
           }}>
@@ -39,15 +39,20 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='#bio' className='nav-links' onClick={closeMobileMenu}>
+              <Link className='nav-links' onClick={() => {
+                  closeMobileMenu()
+                  window.scrollTo({ top: 880, behavior: 'smooth' })
+                }}>
                 Who am I?
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='#projects'
                 className='nav-links'
-                onClick={closeMobileMenu}
+                onClick={() => {
+                  closeMobileMenu()
+                  window.scrollTo({ top: 1700, behavior: 'smooth' })
+                }}
                 smooth
               >
                 Projects
