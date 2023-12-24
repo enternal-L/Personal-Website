@@ -11,9 +11,7 @@
     overflow: hidden;
     border: 8px solid #242424;
     position: relative;
-    margin: 0px 15px;
-    display: flex;
-    flex: 1;
+    margin-left: 24px;
 }
 
 .card-img{

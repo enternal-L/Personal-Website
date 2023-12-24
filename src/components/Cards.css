@@ -15,8 +15,9 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
   max-width: 1120px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -28,7 +29,7 @@ h1 {
 }
 
 .cards__items {
-  margin-bottom: 24px;
+  margin: 24px 24px;
 }
 
 .cards__item {
