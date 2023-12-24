@@ -4,14 +4,6 @@
     padding: 0;
 }
 
-.card-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
-    background-color: #fff;
-}
-
 .card{
     width: 450px;
     height: 450px;
@@ -19,6 +11,9 @@
     overflow: hidden;
     border: 8px solid #242424;
     position: relative;
+    margin: 0px 15px;
+    display: flex;
+    flex: 1;
 }
 
 .card-img{

@@ -1,7 +1,9 @@
 import CardItem from "./CardItem"
 import MRover from '../images/mrover.jpg'
 import Placeholder from '../images/Placeholder.png'
+import Card from './newCard'
 import './Cards.css';
+import './newCard.css'
 
 function Cards() {
   return (
@@ -10,31 +12,35 @@ function Cards() {
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
-            <CardItem
-              src=  {MRover}
-              text='MRover'
-              label='Robotics'
-              path='https://github.com/umrover/mrover-ros/wiki'
+            <Card 
+              title = 'MRover' 
+              subtitle = 'Member' 
+              desc = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsam nobis, delectus adipisci dignissimos, ab obcaecati laborum non tenetur eveniet voluptatem laudantium itaque a error doloremque eum reiciendis minus temporibus.' 
+              path = 'https://github.com/umrover/mrover-ros/wiki'
+              src = 'http://localhost:5173/mrover.jpg'
             />
-            <CardItem
-              src=  {Placeholder}
-              text='Pill Packer'
-              label='Robotics'
-              path='https://youtu.be/3o2vF-bXeKU'
+            <Card
+              title = 'MRover' 
+              subtitle = 'Member' 
+              desc = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsam nobis, delectus adipisci dignissimos, ab obcaecati laborum non tenetur eveniet voluptatem laudantium itaque a error doloremque eum reiciendis minus temporibus.' 
+              path = 'https://github.com/umrover/mrover-ros/wiki'
+              src = 'http://localhost:5173/mrover.jpg'
             />
           </ul>
           <ul className="cards__items">
-            <CardItem
-                src=  {Placeholder}
-                text="Stopwatch-in-JS"
-                label='Website'
-                path='https://enternal-l.github.io/Stopwatch-in-JS/'
-              />
-            <CardItem
-              src=  {Placeholder}
-              text='Feel The Heat'
-              label='Website'
-              path='/'
+            <Card
+              title = 'MRover' 
+              subtitle = 'Member' 
+              desc = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsam nobis, delectus adipisci dignissimos, ab obcaecati laborum non tenetur eveniet voluptatem laudantium itaque a error doloremque eum reiciendis minus temporibus.' 
+              path = 'https://github.com/umrover/mrover-ros/wiki'
+              src = 'http://localhost:5173/mrover.jpg'
+            />
+            <Card
+              title = 'MRover' 
+              subtitle = 'Member' 
+              desc = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsam nobis, delectus adipisci dignissimos, ab obcaecati laborum non tenetur eveniet voluptatem laudantium itaque a error doloremque eum reiciendis minus temporibus.' 
+              path = 'https://github.com/umrover/mrover-ros/wiki'
+              src = 'http://localhost:5173/mrover.jpg'
             />
           </ul>
         </div>
