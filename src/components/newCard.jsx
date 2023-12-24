@@ -1,20 +1,18 @@
-import './newCard.css'
+import { Link } from 'react-router-dom'
 
-function newCard(){
+function newCard(props){
     return(
         <>
-            <div className = 'card-container box'>
-                <div className='card box'>
+            <li className='card box'>
+                <Link to = {props.path} target='_blank'>
                     <div className = 'card-body box'>
-                            <h1 className='card-title'>PROJECT</h1>
-                            <p className='card-sub-title'>Project Subtitle</p>
-                            <p className='card-info'>lblablbalablablabldlkadblkbdlkdalkabdlk</p>
+                            <h1 className='card-title'>{props.title}</h1>
+                            <p className='card-sub-title'>{props.subtitle}</p>
+                            <p className='card-info'>{props.desc}</p>
                         </div>
-                        <img className = 'card-img' src = 'http://localhost:5173/mrover.jpg'></img>
-                    {/* <a className = 'link-container' href = 'https://github.com/umrover/mrover-ros/wiki' target='_blank'>
-                    </a> */}
-                </div>
-            </div>
+                    <img className = 'card-img' src = {props.src}></img>
+                </Link>
+            </li>
         </>
     )
 }
