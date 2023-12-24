@@ -2,7 +2,7 @@ import './Bio.css'
 import './ImageSlider.css'
 import './ImageSlider'
 import ImageSlider from './ImageSlider';
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 import { useState, useEffect } from 'react';
 
 function Bio(){
@@ -35,23 +35,27 @@ function Bio(){
 
     // [link, object-pos]
 
-    const mousePosition = useMousePosition();
+    // const mousePosition = useMousePosition();
     
     return(
         <>
             <div className = {'bio-wrapper'}>
-                <div className = {`bio-grid ${myStyle ? 'show' : ''}`}>
-                    <div className = 'bio-div'>
-                        <div className = 'bio-div-in'>
-                            {/* <h1 className = 'bio-title animation line'><p>Marvin is a <span>{TypeEffect}</span><Cursor cursorColor='black' /></p></h1> */}
-                            <h1 className = 'bio-title line'>Background</h1>
-                        </div>
-                        <p className = 'bio-desc'>Hi my name's Marvin, born in New Orleans, grew up in Thailand, and attending The University of Michigan.</p>
-                        <p className = 'bio-desc'>I love to code, video edit, play basketball/volleyball and, sometimes, doodle.</p>
-                        <p className = 'bio-desc line bottom-desc'>As of right now, I'm focused on developing side projects and myself professionally.</p>
+                <MouseParallaxContainer globalFactorX={0.015} globalFactorY={0.015}>
+                    <div className = {`bio-grid ${myStyle ? 'show' : ''}`}>
+                        <MouseParallaxChild>
+                            <div className = 'bio-div'>
+                                <div className = 'bio-div-in'>
+                                    {/* <h1 className = 'bio-title animation line'><p>Marvin is a <span>{TypeEffect}</span><Cursor cursorColor='black' /></p></h1> */}
+                                    <h1 className = 'bio-title line'>Background</h1>
+                                </div>
+                                <p className = 'bio-desc'>Hi my name's Marvin, born in New Orleans, grew up in Thailand, and attending The University of Michigan.</p>
+                                <p className = 'bio-desc'>I love to code, video edit, play basketball/volleyball and, sometimes, doodle.</p>
+                                <p className = 'bio-desc line bottom-desc'>As of right now, I'm focused on developing side projects and myself professionally.</p>
+                            </div>
+                        </MouseParallaxChild>
+                        <ImageSlider slides={slides}/>
                     </div>
-                    <ImageSlider slides={slides}/>
-                </div>
+                </MouseParallaxContainer>
             </div>
         </>
     );
@@ -61,29 +65,29 @@ function Bio(){
 
 // myDiv2.style.transform = `translate(${mousePosition.x}, ${mousePosition})`;
 
-const useMousePosition = () =>{
+// const useMousePosition = () =>{
     
-    const [mousePosition,setMousePosition] = useState({ x: null, y: null});
+//     const [mousePosition,setMousePosition] = useState({ x: null, y: null});
 
-    useEffect(() => {
+//     useEffect(() => {
         
-        const updateMousePosition = ev => {
-            setMousePosition({ x: ev.clientX, y: ev.clientY });
-        };
+//         const updateMousePosition = ev => {
+//             setMousePosition({ x: ev.clientX, y: ev.clientY });
+//         };
         
-        window.addEventListener('mousemove', updateMousePosition);
+//         window.addEventListener('mousemove', updateMousePosition);
         
-        return () => {
-            window.removeEventListener('mousemove', updateMousePosition);
-        };
+//         return () => {
+//             window.removeEventListener('mousemove', updateMousePosition);
+//         };
 
 
-    }, []);
+//     }, []);
 
-    return mousePosition
+//     return mousePosition
 
-    // 362, 633 center of text
-}
+//     // 362, 633 center of text
+// }
 
 
 export default Bio
