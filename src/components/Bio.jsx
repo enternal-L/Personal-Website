@@ -35,16 +35,7 @@ function Bio(){
 
     // [link, object-pos]
 
-    const [TypeEffect] = useTypewriter({
-        words: ['Developer','Student', 'Brother', 'Dank Memer'],
-        loop: 0,
-        cursor: true,
-        cursorBlinking: true,
-        delaySpeed: 3000
-
-
-    })
-    
+    const mousePosition = useMousePosition();
     
     return(
         <>
@@ -65,5 +56,34 @@ function Bio(){
         </>
     );
 }
+
+// const myDiv2 = document.querySelector('.bio-grid')
+
+// myDiv2.style.transform = `translate(${mousePosition.x}, ${mousePosition})`;
+
+const useMousePosition = () =>{
+    
+    const [mousePosition,setMousePosition] = useState({ x: null, y: null});
+
+    useEffect(() => {
+        
+        const updateMousePosition = ev => {
+            setMousePosition({ x: ev.clientX, y: ev.clientY });
+        };
+        
+        window.addEventListener('mousemove', updateMousePosition);
+        
+        return () => {
+            window.removeEventListener('mousemove', updateMousePosition);
+        };
+
+
+    }, []);
+
+    return mousePosition
+
+    // 362, 633 center of text
+}
+
 
 export default Bio

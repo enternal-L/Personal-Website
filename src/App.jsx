@@ -27,9 +27,10 @@ export default function App(){
 // To Do:
 // get resume file download to work
 // infinite carousel in cards section
+// Move text based on cursor position
 // bio page --> use paralax for bio text DONE
 // change react-router-dom to window scroll to DONE
 // Add Some text effects for herosection DONE
 // Clear unneeded css
-// Work on phone media screen, too much spacing between iamge and project section
+// Work on phone media screen, too much spacing between image and project section DONE
 
