@@ -16,7 +16,15 @@ function Bio(){
         const observer = new IntersectionObserver(
             entries => {
             entries.forEach((entry) => {
-              entry.isIntersecting ? addStyle(true) : addStyle(false)
+              if (entry.isIntersecting){
+                    addStyle(true);
+                }
+                
+                // if ever want for bio section to appear-reappear
+                //
+                // else{
+                //     addStyle(false);
+                // }
             },
             );
         })
