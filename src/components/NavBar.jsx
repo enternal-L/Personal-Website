@@ -41,7 +41,12 @@ function Navbar() {
             <li className='nav-item'>
               <Link className='nav-links' onClick={() => {
                   closeMobileMenu()
-                  window.scrollTo({ top: 880, behavior: 'smooth' })
+                  if(window.innerWidth <= 960){
+                    window.scrollTo({ top: 900, behavior: 'smooth' })
+                  }
+                  else{
+                    window.scrollTo({ top: 880, behavior: 'smooth' })
+                  }
                 }}>
                 Who am I?
               </Link>
@@ -51,7 +56,12 @@ function Navbar() {
                 className='nav-links'
                 onClick={() => {
                   closeMobileMenu()
-                  window.scrollTo({ top: 1700, behavior: 'smooth' })
+                  if(window.innerWidth <= 960){
+                    window.scrollTo({ top: 2050, behavior: 'smooth' })
+                  }
+                  else{
+                    window.scrollTo({ top: 1740, behavior: 'smooth' })
+                  }
                 }}
                 smooth
               >

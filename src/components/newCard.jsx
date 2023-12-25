@@ -8,7 +8,8 @@ function newCard(props){
                         <div className = 'card-body box'>
                                 <h1 className='card-title'>{props.title}</h1>
                                 <p className='card-sub-title'>{props.subtitle}</p>
-                                <p className='card-info'>{props.desc}</p>
+                                <p className='card-info margin-ing1'>{props.desc1}</p>
+                                <p className='card-info margin-ing2'>{props.desc2}</p>
                         </div>
                         <img className = 'card-img' src = {props.src}></img>
                     </Link>
