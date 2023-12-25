@@ -25,7 +25,7 @@ function Bio(){
                 // else{
                 //     addStyle(false);
                 // }
-            },
+            }
             );
         })
 

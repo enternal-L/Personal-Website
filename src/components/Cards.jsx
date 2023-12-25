@@ -61,7 +61,7 @@ function Cards() {
               modifier: 1
             }}
             modules={[EffectCoverflow, Pagination]}
-            className="mySwiper"
+            className={"mySwiper"}
           >
             <SwiperSlide>
                 <Card 
