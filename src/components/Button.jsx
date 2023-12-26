@@ -13,7 +13,7 @@ export const Button = ({children, type, onClick, buttonStyle, buttonSize, downlo
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
     
     if(download){
-        source = 'http://localhost:5173/Resume.pdf'
+        source = '../../Resume.pdf'
         blank = '_blank'
     }
 

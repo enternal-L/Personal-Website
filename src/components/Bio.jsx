@@ -35,10 +35,10 @@ function Bio(){
     
     
     const slides = [
-        ["http://localhost:5173/marvin1.jpg", '80%'],
-        ["http://localhost:5173/marvin5.JPG", '20%'],
-        ["http://localhost:5173/marvin2.JPG", '0'],
-        ["http://localhost:5173/marvin4.jpg", '15%'],
+        ["../../marvin1.jpg", '80%'],
+        ["../../marvin5.JPG", '20%'],
+        ["../../marvin2.JPG", '0'],
+        ["../../marvin4.jpg", '15%'],
     ]
 
     // [link, object-pos]

@@ -68,7 +68,7 @@ function Cards() {
                     // desc1 = 'The Michigan Mars Rover Team (MRover) is a student-run, multidisciplinary organization whose mission is to design and build a rover for the exploration of extraterrestrial environments.'
                     // desc2 = 'Responsible for aligning Long Range Detection Camera with ZED Camera to improve Aruco Code detection and decrease disperencies between lowerbound detection of LRD Camera and upperbound detection of ZED Camera.' 
                     path = 'https://github.com/umrover/mrover-ros/wiki'
-                    src = 'http://localhost:5173/mrover.jpg'
+                    src = '../../mrover.jpg'
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -78,7 +78,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = ''
                     path = 'https://youtu.be/3o2vF-bXeKU'
-                    src = 'http://localhost:5173/PillPacker.PNG'
+                    src = '../../PillPacker.PNG'
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -88,7 +88,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = '' 
                     path = 'https://enternal-l.github.io/Stopwatch-in-JS/'
-                    src = 'http://localhost:5173/Stopwatch.PNG'
+                    src = '../../Stopwatch.PNG'
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -98,7 +98,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = ''
                     path = 'https://youtu.be/AAzt0SaWzFk'
-                    src = 'http://localhost:5173/FeelTheHeat.PNG'
+                    src = '../../FeelTheHeat.PNG'
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -108,7 +108,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = ''
                     path = 'https://www.youtube.com/watch?v=b2uJjh1oVZo'
-                    src = 'http://localhost:5173/AstroMania.PNG'
+                    src = '../../AstroMania.PNG'
                   />
             </SwiperSlide>
         </Swiper>
