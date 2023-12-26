@@ -35,6 +35,13 @@ video {
     height: 100%;
     position: fixed;
     z-index: -1;
+    background-color: #fff;
+}
+
+.lazy{
+    animation-name: Appear;
+    animation-duration: 1.3s;
+    animation-timing-function: ease;
 }
 
 .hero-container{
