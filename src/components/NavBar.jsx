@@ -78,6 +78,9 @@ function Navbar() {
               <Link
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
+                to = 'http://localhost:5173/Resume.pdf'
+                download
+                target = '_blank'
               >
                 Resume
               </Link>

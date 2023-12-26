@@ -17,12 +17,6 @@ export const Button = ({children, type, onClick, buttonStyle, buttonSize, downlo
         blank = '_blank'
     }
 
-    else{
-        source = ''
-        blank = ''
-    }
-
-
     return(
         <Link className = "btn-mobile" to = {source} target = {blank}>
             <button className = {`btn ${checkButtonStyle} ${checkButtonSize}`} onClick = {onClick} type = {type}>
