@@ -5,6 +5,12 @@ import ImageSlider from './ImageSlider';
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 import { useState, useEffect } from 'react';
 
+// Images
+import Marvin1 from '../images/marvin1.jpg'
+import Marvin2 from '../images/marvin5.jpg'
+import Marvin3 from '../images/marvin2.jpg'
+import Marvin4 from '../images/marvin4.jpg'
+
 function Bio(){
 
     const [myStyle, addStyle] = useState(false);
@@ -35,10 +41,10 @@ function Bio(){
     
     
     const slides = [
-        ["../../marvin1.jpg", '80%'],
-        ["../../marvin5.JPG", '20%'],
-        ["../../marvin2.JPG", '0'],
-        ["../../marvin4.jpg", '15%'],
+        [Marvin1, '80%'],
+        [Marvin2, '20%'],
+        [Marvin3, '0'],
+        [Marvin4, '15%'],
     ]
 
     // [link, object-pos]

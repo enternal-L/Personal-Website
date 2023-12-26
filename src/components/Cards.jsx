@@ -11,6 +11,14 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './mySwiper.css';
 
+// import images
+
+import Mrover from '../images/mrover.jpg'
+import PillPacker from '../images/PillPacker.png'
+import Stopwatch from '../images/Stopwatch.png'
+import FeelTheHeat from '../images/FeelTheHeat.png'
+import AstroMania from '../images/AstroMania.png'
+
 
 
 function Cards() {
@@ -68,7 +76,7 @@ function Cards() {
                     // desc1 = 'The Michigan Mars Rover Team (MRover) is a student-run, multidisciplinary organization whose mission is to design and build a rover for the exploration of extraterrestrial environments.'
                     // desc2 = 'Responsible for aligning Long Range Detection Camera with ZED Camera to improve Aruco Code detection and decrease disperencies between lowerbound detection of LRD Camera and upperbound detection of ZED Camera.' 
                     path = 'https://github.com/umrover/mrover-ros/wiki'
-                    src = '../../mrover.jpg'
+                    src = {Mrover}
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -78,7 +86,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = ''
                     path = 'https://youtu.be/3o2vF-bXeKU'
-                    src = '../../PillPacker.PNG'
+                    src = {PillPacker}
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -88,7 +96,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = '' 
                     path = 'https://enternal-l.github.io/Stopwatch-in-JS/'
-                    src = '../../Stopwatch.PNG'
+                    src = {Stopwatch}
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -98,7 +106,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = ''
                     path = 'https://youtu.be/AAzt0SaWzFk'
-                    src = '../../FeelTheHeat.PNG'
+                    src = {FeelTheHeat}
                   />
             </SwiperSlide>
             <SwiperSlide>
@@ -108,7 +116,7 @@ function Cards() {
                     desc1 = ''
                     desc2 = ''
                     path = 'https://www.youtube.com/watch?v=b2uJjh1oVZo'
-                    src = '../../AstroMania.PNG'
+                    src = {AstroMania}
                   />
             </SwiperSlide>
         </Swiper>

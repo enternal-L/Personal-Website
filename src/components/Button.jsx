@@ -1,5 +1,6 @@
 import "./Button.css";
 import { Link } from 'react-router-dom';
+import Resume from '../files/Resume.pdf'
 
 const STYLES = ['btn--primary', 'btn--outline'];
 
@@ -13,7 +14,7 @@ export const Button = ({children, type, onClick, buttonStyle, buttonSize, downlo
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
     
     if(download){
-        source = '../../Resume.pdf'
+        source = Resume
         blank = '_blank'
     }
 
