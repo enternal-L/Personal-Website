@@ -40,8 +40,6 @@ function Cards() {
 
   }, []);
 
-  console.log(myStyle)
-
   return (
     <div className='cards' id='projects'>
       <div className={`cards__anim ${myStyle ? 'show' : ''}`}>

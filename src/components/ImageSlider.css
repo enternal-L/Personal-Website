@@ -39,9 +39,10 @@
 .carousel-div-wrapper{
     width: 100%;
     height: 80%;
-    padding: 30px 10px 10px 10px;
+    padding: 10px;
     transition: transform 1.3s;
-}
+    outline: 2px solid #242424; 
+    }
 
 .marvin-img{
     width: 100%;

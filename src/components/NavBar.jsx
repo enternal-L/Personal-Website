@@ -19,7 +19,13 @@ function Navbar() {
   };
 
   useEffect(() => {
+
     showButton();
+
+    const myButton = document.querySelector('.btn-mobile');
+
+    myButton.setAttribute('download','');
+
   }, []);
 
   window.addEventListener('resize', showButton);
@@ -77,7 +83,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>Resume</Button>}
+           {button && <Button buttonStyle='btn--outline' download = {true}>Resume</Button>}
         </div>
       </nav>
     </>
