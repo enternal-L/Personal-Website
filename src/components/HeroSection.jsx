@@ -14,11 +14,11 @@ function HeroSection() {
     return (
         <>
             <div className = 'hero-container' id='top'>
-                <video className = 'lazy' src = {video} autoPlay loop muted playsinline></video>
+                <video className = 'lazy' src = {video} autoPlay loop muted playsInline></video>
                 <h1>Marvin Jirapongsuwan</h1>
                 <p><span>{TypeEffect}</span><Cursor cursorColor='white' /></p>
                 <div className = 'hero-btns'>
-                    <Button className = 'btns' buttonStyle = 'btn--outline' buttonSize= 'btn--large' onClick={() => {
+                    <Button className = 'btns' buttonStyle = 'btn--outline' buttonSize= 'btn--large' download = {false} onClick={() => {
                         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
                     }}>Contact Me</Button>
                 </div>
