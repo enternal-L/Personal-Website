@@ -13,6 +13,8 @@ import './mySwiper.css';
 
 // import images
 
+import Hangout from '../images/hangout_logo.png'
+import Parrot from '../images/Parrot.png'
 import Mrover from '../images/mrover.jpg'
 import PillPacker from '../images/PillPacker.png'
 import Stopwatch from '../images/Stopwatch.png'
@@ -69,6 +71,26 @@ function Cards() {
             modules={[EffectCoverflow, Pagination]}
             className={"mySwiper"}
           >
+            <SwiperSlide>
+                <Card 
+                    title = 'Hangout!' 
+                    subtitle = 'Lead Developer' 
+                    // desc1 = 'The Michigan Mars Rover Team (MRover) is a student-run, multidisciplinary organization whose mission is to design and build a rover for the exploration of extraterrestrial environments.'
+                    // desc2 = 'Responsible for aligning Long Range Detection Camera with ZED Camera to improve Aruco Code detection and decrease disperencies between lowerbound detection of LRD Camera and upperbound detection of ZED Camera.' 
+                    path = 'https://github.com/enternal-L/hang-out'
+                    src = {Hangout}
+                  />
+            </SwiperSlide>
+            <SwiperSlide>
+                <Card 
+                    title = 'Parrot Producer' 
+                    subtitle = 'Developer' 
+                    // desc1 = 'The Michigan Mars Rover Team (MRover) is a student-run, multidisciplinary organization whose mission is to design and build a rover for the exploration of extraterrestrial environments.'
+                    // desc2 = 'Responsible for aligning Long Range Detection Camera with ZED Camera to improve Aruco Code detection and decrease disperencies between lowerbound detection of LRD Camera and upperbound detection of ZED Camera.' 
+                    path = 'https://github.com/masterspin/Parrot'
+                    src = {Parrot}
+                  />
+            </SwiperSlide>
             <SwiperSlide>
                 <Card 
                     title = 'MRover (LRD)' 

@@ -18,7 +18,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='https://www.youtube.com/@enternal8286/videos'
+              to='https://www.youtube.com/@enternal0070/videos'
               target='_blank'
               aria-label='Youtube'
             >
@@ -26,7 +26,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link linkedin'
-              to='https://www.linkedin.com/in/marvin-jirapongsuwan-918054292/'
+              to='https://www.linkedin.com/in/marvin-jirapongsuwan/'
               target='_blank'
               aria-label='LinkedIn'
             >

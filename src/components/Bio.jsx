@@ -63,8 +63,8 @@ function Bio(){
                                     <h1 className = 'bio-title line'>Background</h1>
                                 </div>
                                 <p className = 'bio-desc'>Hi my name's Marvin, born in New Orleans, grew up in Thailand, and attending The University of Michigan.</p>
-                                <p className = 'bio-desc'>I love to code, video edit, play basketball/volleyball and, sometimes, doodle.</p>
-                                <p className = 'bio-desc line bottom-desc'>As of right now, I'm focused on developing side projects and myself professionally.</p>
+                                <p className = 'bio-desc'>I love to code, video edit, play basketball/volleyball and yap.</p>
+                                <p className = 'bio-desc line bottom-desc'>As of right now, I'm doing research on brain interface hardware at UMDBI, focusing on improving and creating source modules.</p>
                             </div>
                         </MouseParallaxChild>
                         <ImageSlider slides={slides}/>
