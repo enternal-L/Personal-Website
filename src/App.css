@@ -1,8 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* Scramble text animation */
+@keyframes flicker {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.95; }
+  100% { opacity: 0.8; }
+}
+
+.text-scramble {
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.text-scramble.scrambling {
+  animation: flicker 0.2s infinite;
+}
+
+/* Remove focus outlines */
+button:focus,
+a:focus {
+  outline: none !important;
+}
+
+/* Carousel customization */
+.carousel-container {
+  position: relative;
+  overflow: visible !important; /* Ensure arrows outside container are visible */
+}
+
+/* Ensure parent containers don't clip the arrows */
+.bg-white.rounded-lg.shadow-lg.overflow-hidden {
+  overflow: visible !important;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: -50px !important; /* Position outside the container */
+}
+
+.slick-next {
+  right: -50px !important; /* Position outside the container */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #37352f !important;
+  font-size: 24px;
+  opacity: 0.75;
+}
+
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  color: #37352f !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #2eaadc !important;
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Notion-like transitions */
+.transition-colors {
+  transition: all 0.2s ease;
+}
+
+/* Custom container width */
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+/* Carousel slide transitions */
+.slick-slide {
+  transition: opacity 0.3s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .home,
@@ -42,3 +168,98 @@
   color: #fff;
   font-size: 100px;
 }
+
+/* Floating Cards Animation */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, -30px);
+  }
+  50% {
+    transform: translate(60px, 0);
+  }
+  75% {
+    transform: translate(30px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.floating-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-card {
+  transition: transform 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: scale(1.05) !important;
+  z-index: 10;
+}
+
+/* Project Cards */
+.cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.project-card {
+  cursor: grab;
+  will-change: transform;
+  transition: all 0.3s ease;
+}
+
+.project-card:active {
+  cursor: grabbing;
+}
+
+.project-card:hover {
+  z-index: 10;
+  transform: scale(1.05) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Card explosion animation */
+@keyframes explode {
+  0% {
+    transform: scale(0.5) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Card Flip Effect */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .transform-style-preserve-3d {
+  transform: rotateY(180deg);
+}
+
+/* Remove previous floating cards animation */
+
+/* Remove all dark mode related styles */

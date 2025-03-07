@@ -1,25 +1,24 @@
 import React from 'react';
-import NavBar from "./components/NavBar";
-import Footer from './components/Footer';
-import HeroSection from './components/HeroSection'
-import Cards from './components/Cards';
-import Bio from './components/Bio'
-import { BrowserRouter as Router } from "react-router-dom";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
+import Header from './components/Header';
+import CarouselSection from './components/CarouselSection';
+import SocialFooter from './components/SocialFooter';
 
-export default function App(){
+const App = () => {
   return (
-    <>
-      <Router>
-        <NavBar />
-        <HeroSection />
-        <Bio />
-        <Cards />
-        <Footer />
-      </Router> 
-    </>
+    <div className="min-h-screen bg-[#ffffff] text-[#37352f]">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <Header />
+        <CarouselSection />
+        <SocialFooter />
+      </div>
+    </div>
   );
-}
+};
+
+export default App;
 
 // typescript will yell if component starts with lowercase
 
