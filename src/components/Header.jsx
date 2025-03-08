@@ -5,11 +5,15 @@ const Header = () => {
   const names = ['Marvin', 'marvincs', 'enternal', 'มาวิน'];
   const [displayText, setDisplayText] = useState(names[0]);
   const [isScrambling, setIsScrambling] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const scrambleSpeed = 100;
   const pauseDuration = 8000;
 
   useEffect(() => {
+    // Trigger fade-in animation
+    setIsVisible(true);
+
     let currentIndex = 0;
     let intervalId;
     let timeout;
@@ -51,9 +55,13 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="mb-8 flex flex-row gap-8">
-      <img src = {profile} className = "w-24 h-24 object-cover rounded-full"></img>
-      <div className = "flex flex-col justify-center">
+    <div className={`mb-8 flex flex-row gap-8 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+      <img 
+        src={profile} 
+        className="w-24 h-24 object-cover rounded-full"
+        alt="Profile"
+      />
+      <div className="flex flex-col justify-center">
         <h1 className="text-4xl font-bold mb-2">
           Hi, I'm{' '}
           <span className='text-scramble text-notion-default'>
@@ -62,7 +70,7 @@ const Header = () => {
           !
         </h1>
         <p className="text-[#6B6B6B]">born in the States, raised in Thailand, studying cs @umich</p>
-        </div>
+      </div>
     </div>
   );
 };

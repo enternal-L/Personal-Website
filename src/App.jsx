@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
@@ -8,13 +9,17 @@ import SocialFooter from './components/SocialFooter';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#ffffff] text-[#37352f]">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <Header />
-        <CarouselSection />
-        <SocialFooter />
+    <Router>
+      <div className="min-h-screen bg-[#ffffff] text-[#37352f]">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <Header />
+          <Routes>
+            <Route path="/" element={<CarouselSection />} />
+          </Routes>
+          <SocialFooter />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

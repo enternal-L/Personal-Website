@@ -4,13 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BackgroundSection from './BackgroundSection';
 import ProjectsSection from './ProjectsSection';
+import TimelineSection from './TimelineSection';
 
 const CustomArrow = ({ direction, onClick }) => (
   <button
     onClick={onClick}
     className={`absolute top-1/2 transform -translate-y-1/2 ${
-      direction === 'prev' ? '-left-16' : '-right-16'
-    } z-10 text-4xl text-notion-default hover:text-notion-hover transition-colors focus:outline-none`}
+      direction === 'prev' ? '-left-12 hover:-translate-x-1' : '-right-12 hover:translate-x-1'
+    } z-10 text-4xl text-notion-default transition-transform duration-200 focus:outline-none`}
   >
     {direction === 'prev' ? '<' : '>'}
   </button>
@@ -36,11 +37,12 @@ const CarouselSection = () => {
       <Slider {...carouselSettings}>
         <BackgroundSection />
         <ProjectsSection />
+        <TimelineSection />
         <div className="p-8">
           <h2 className="text-2xl font-semibold mb-4">I try to come up with more ideas</h2>
           <div className="prose max-w-none">
             <p className="text-[#6B6B6B]">
-              More content coming soon...
+              memes I like from 2025: artists who can sing vs artists who can't sing; my name is david dad, I want some icecream
             </p>
           </div>
         </div>
