@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/" element={<CarouselSection />} />
           </Routes>
           <SocialFooter />
+          <Analytics />
         </div>
       </div>
     </Router>
@@ -25,20 +27,4 @@ const App = () => {
 
 export default App;
 
-// typescript will yell if component starts with lowercase
-
-
-// To Do:
-// get resume file download to work DONE
-// infinite carousel in cards section DONE
-// place info into infinite carousel --> maybe should make a pop up of description so its cleaner
-// animation on infinite carousel section DONE
-// Move text based on cursor position DONE
-// bio page --> use paralax for bio text DONE
-// change react-router-dom to window scroll to DONE
-// Add Some text effects for herosection DONE
-// Clear unneeded css DONE
-// Work on phone media screen, too much spacing between image and project section DONE
-// Remake Favicon.ico
-// turn off animation of image going away when in mobile mode DONE
 
