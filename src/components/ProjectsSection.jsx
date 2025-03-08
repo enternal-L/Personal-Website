@@ -6,7 +6,7 @@ import pill from '../assets/images/PillPacker.png';
 import aita from '../assets/images/logo.png';
 import stopwatch from '../assets/images/Stopwatch.png';
 import FeelTheHeat from '../assets/images/FeelTheHeat.png';
-import Astromania from '../assets/images/Astromania.png';
+import Astromania from '../assets/images/AstroMania.png';
 
 const ProjectsSection = () => {
   const projects = [
