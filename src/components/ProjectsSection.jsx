@@ -4,6 +4,9 @@ import hangout from '../assets/images/hangout_logo.png';
 import parrot from '../assets/images/Parrot.png';
 import pill from '../assets/images/PillPacker.png';
 import aita from '../assets/images/logo.png';
+import stopwatch from '../assets/images/Stopwatch.png';
+import FeelTheHeat from '../assets/images/FeelTheHeat.png';
+import Astromania from '../assets/images/Astromania.png';
 
 const ProjectsSection = () => {
   const projects = [
@@ -36,7 +39,28 @@ const ProjectsSection = () => {
       title: 'Pill Packer',
       description: 'Pill packing software developed using Python. For ENGR100-850, by Arjun, Brian, Daniel, Eric, and Marvin.',
       image: pill,
-      gitLink: '',
+      gitLink: 'https://youtu.be/3o2vF-bXeKU?si=gJq-H1qYF7MLLfPB',
+      textLim: 6
+    },
+    {
+      title: 'StopwatchJS',
+      description: 'Apple-like stopwatch built with HTML, CSS, and JavaScript. Supports stopwatch starts, stops, laps, and resets.',
+      image: stopwatch,
+      gitLink: 'https://github.com/enternal-L/Stopwatch-in-JS',
+      textLim: 9
+    },
+    {
+      title: 'Feel The Heat',
+      description: 'Dynamic map visualization tool built with HTML and Python, Flask (Jinja), Folium, Matplotlib, Geopandas. Website displays past and current, and predicts future heatmap data of all countries.',
+      textLim: 9,
+      image: FeelTheHeat,
+      gitLink: ''
+    },
+    {
+      title: 'Astromania',
+      description: 'Website hosting educational game built with HTML, CSS, and JavaScript. Used during school-wide tournament where profits went to charity.',
+      image: Astromania,
+      gitLink: 'https://github.com/enternal-L/AstromaniaWeb',
       textLim: 6
     }
   ];
