@@ -22,15 +22,18 @@ const BackgroundSection = () => {
         <div className="flex flex-row justify-between">
           <div className={`prose w-full h-full ${showDescription ? 'animate-fade-in' : 'opacity-0'}`}>
             <p className="text-[#6B6B6B]">
-              I'm passionate about low-level software, taking operating systems (482) and web systems (485).
-              I'm currently writing C++ code at the <a className="underline font-bold" target="_blank" href="https://sites.google.com/umich.edu/umdbi/home">UMDBI Lab</a>.
+              I'm passionate about low-level software.
+              Wrote C++ at the <a className="underline font-bold" target="_blank" href="https://sites.google.com/umich.edu/umdbi/home">UMDBI Lab</a>.
               <br />
               <br />
               I occasionally post content on my <a className='underline font-bold' target="_blank" href="https://www.youtube.com/@enternal0070/">youtube</a>.
               I enjoy volleyball & basketball and <a className='underline font-bold' target="_blank" href="https://www.overbuff.com/players/ZiangZ-1630">game</a>.
               <br />
               <br />
-              For now, I am <a className='underline font-bold' target="_blank" href="https://i.redd.it/zd9vbm8jk4ad1.jpeg">unemployed</a> this summer.
+              I'll be working at <a className='underline font-bold' target="_blank" href= "https://www.decimalcode.com/">Decimal Code</a> this summer, focusing on automating billing for medical professionals.
+              <br />
+              <br />
+              I'll also be teaching python to first-time-coders as a <a className='underline font-bold' target="_blank" href= "https://joyofcoding.eecs.umich.edu/">Joy of Coding</a> Coach.
             </p>
           </div>
         </div>

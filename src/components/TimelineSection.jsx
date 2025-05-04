@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import walls from '../assets/images/Unilver.png';
 import ummed from '../assets/images/um_logo.png';
 import ddx from '../assets/images/ddx.jpg';
+import decimal from '../assets/images/decimal.jpg'
 
 const TimelineSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,6 +36,14 @@ const TimelineSection = () => {
       image: ummed,
       link: 'https://sites.google.com/umich.edu/umdbi/home',
       description: 'Writing Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
+    },
+    {
+      year: '2025-Present',
+      company: 'Decimal Code',
+      position: 'Software Engineer Intern',
+      image: decimal,
+      link: 'https://www.decimalcode.com/',
+      description: 'Automating CPT coding to uncover billing inefficiencies for healthcare professionals'
     }
   ];
 
@@ -72,12 +81,12 @@ const TimelineSection = () => {
               {/* Content */}
               <div className="mt-6 flex flex-col items-center text-center">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-lg font-semibold">{item.company}</h3>
+                  <h3 className="text-md font-semibold">{item.company}</h3>
                   <span className="text-sm text-gray-500">•</span>
                   <span className="text-sm text-gray-500">{item.year}</span>
                 </div>
                 <p className="font-medium mb-1">{item.position}</p>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <p className="text-gray-600 text-xs">{item.description}</p>
               </div>
             </div>
           ))}
