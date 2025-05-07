@@ -40,10 +40,10 @@ const TimelineSection = () => {
     {
       year: '2025-Present',
       company: 'Nutanix',
-      position: 'Incoming Member of Technical Staff (Intern)',
+      position: 'Member of Technical Staff (Intern)',
       image: nutanix,
       link: 'https://www.nutanix.com/',
-      description: 'File Servers Team'
+      description: 'Incoming to File Servers Team'
     }
   ];
 
