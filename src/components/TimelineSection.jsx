@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import walls from '../assets/images/Unilver.png';
 import ummed from '../assets/images/um_logo.png';
 import ddx from '../assets/images/ddx.jpg';
-import decimal from '../assets/images/decimal.jpg'
+import nutanix from '../assets/images/nutanix.png'
 
 const TimelineSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,11 +32,19 @@ const TimelineSection = () => {
     {
       year: '2024-Present',
       company: 'UMDBI Lab',
-      position: 'Ungraduate Researcher Assistant',
+      position: 'Undergraduate Researcher Assistant',
       image: ummed,
       link: 'https://sites.google.com/umich.edu/umdbi/home',
       description: 'Writing Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
     },
+    {
+      year: '2025-Present',
+      company: 'Nutanix',
+      position: 'Incoming Member of Technical Staff (Intern)',
+      image: nutanix,
+      link: 'https://www.nutanix.com/',
+      description: 'File Servers Team'
+    }
   ];
 
   return (

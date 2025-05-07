@@ -30,6 +30,9 @@ const BackgroundSection = () => {
               I enjoy volleyball & basketball and <a className='underline font-bold' target="_blank" href="https://www.overbuff.com/players/ZiangZ-1630">game</a>.
               <br />
               <br />
+              I'll be working at <a className='underline font-bold' target="_blank" href= "https://www.nutanix.com/">Nutanix</a> this summer, working on the file server team.
+              <br />
+              <br />
               I'll also be teaching python to first-time-coders as a <a className='underline font-bold' target="_blank" href= "https://joyofcoding.eecs.umich.edu/">Joy of Coding</a> Coach.
             </p>
           </div>
