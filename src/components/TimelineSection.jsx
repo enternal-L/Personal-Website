@@ -37,14 +37,6 @@ const TimelineSection = () => {
       link: 'https://sites.google.com/umich.edu/umdbi/home',
       description: 'Writing Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
     },
-    {
-      year: '2025-Present',
-      company: 'Decimal Code',
-      position: 'Software Engineer Intern',
-      image: decimal,
-      link: 'https://www.decimalcode.com/',
-      description: 'Automating CPT coding to uncover billing inefficiencies for healthcare professionals'
-    }
   ];
 
   return (
