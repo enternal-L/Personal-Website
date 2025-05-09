@@ -43,7 +43,7 @@ const TimelineSection = () => {
       position: 'Member of Technical Staff (Intern)',
       image: nutanix,
       link: 'https://www.nutanix.com/',
-      description: 'Incoming to File Servers Team'
+      description: 'Incoming to Files Team'
     }
   ];
 

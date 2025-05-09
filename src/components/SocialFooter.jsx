@@ -22,14 +22,6 @@ const SocialFooter = () => {
         >
           <FaLinkedin size={24} />
         </a>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#37352f] hover:-translate-y-1 transition-transform duration-200 focus:outline-none"
-        >
-          <FaRegFile size={23} />
-        </a>
       </div>
     </footer>
   );
