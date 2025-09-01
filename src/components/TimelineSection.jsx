@@ -35,7 +35,7 @@ const TimelineSection = () => {
       position: 'Undergraduate Researcher Assistant',
       image: ummed,
       link: 'https://sites.google.com/umich.edu/umdbi/home',
-      description: 'Writing Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
+      description: 'Wrote Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
     },
     {
       year: '2025-Present',
@@ -43,7 +43,7 @@ const TimelineSection = () => {
       position: 'Member of Technical Staff (Intern)',
       image: nutanix,
       link: 'https://www.nutanix.com/',
-      description: 'Incoming to Files Team'
+      description: 'Implemented async I/O into core file server'
     }
   ];
 

@@ -22,18 +22,21 @@ const BackgroundSection = () => {
         <div className="flex flex-row justify-between">
           <div className={`prose w-full h-full ${showDescription ? 'animate-fade-in' : 'opacity-0'}`}>
             <p className="text-[#6B6B6B]">
-              I'm passionate about low-level software.
+              I'm passionate about low-level software & systems.
+              <br />
+              <br />
+              Currently working with <a className='underline font-bold' target="_blank" href= "https://ners.engin.umich.edu">NERS</a> to build their radiation data pipeline.
+              <br />
+              <br />
+              Interned at <a className='underline font-bold' target="_blank" href= "https://www.nutanix.com/">Nutanix</a>. 
               Wrote C++ at the <a className="underline font-bold" target="_blank" href="https://sites.google.com/umich.edu/umdbi/home">UMDBI Lab</a>.
+              Taught at <a className='underline font-bold' target="_blank" href= "https://joyofcoding.eecs.umich.edu/">Joy of Coding</a>.
               <br />
               <br />
               I occasionally post content on my <a className='underline font-bold' target="_blank" href="https://www.youtube.com/@enternal0070/">youtube</a>.
               I enjoy volleyball & basketball and <a className='underline font-bold' target="_blank" href="https://www.overbuff.com/players/ZiangZ-1630">game</a>.
               <br />
               <br />
-              I'll be working at <a className='underline font-bold' target="_blank" href= "https://www.nutanix.com/">Nutanix</a> this summer, working on the files team.
-              <br />
-              <br />
-              I'll also be teaching python to first-time-coders as a <a className='underline font-bold' target="_blank" href= "https://joyofcoding.eecs.umich.edu/">Joy of Coding</a> Coach.
             </p>
           </div>
         </div>
