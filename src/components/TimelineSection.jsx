@@ -30,7 +30,7 @@ const TimelineSection = () => {
       description: 'Developed mockup of BMW financial website'
     },
     {
-      year: '2024-Present',
+      year: '2024-2025',
       company: 'UMDBI Lab',
       position: 'Undergraduate Researcher Assistant',
       image: ummed,
@@ -38,7 +38,7 @@ const TimelineSection = () => {
       description: 'Wrote Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
     },
     {
-      year: '2025-Present',
+      year: '2025',
       company: 'Nutanix',
       position: 'Member of Technical Staff (Intern)',
       image: nutanix,

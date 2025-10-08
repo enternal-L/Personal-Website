@@ -34,7 +34,7 @@ const BackgroundSection = () => {
               <br />
               <br />
               I occasionally post content on my <a className='underline font-bold' target="_blank" href="https://www.youtube.com/@enternal0070/">youtube</a>.
-              I enjoy volleyball & basketball and <a className='underline font-bold' target="_blank" href="https://www.overbuff.com/players/ZiangZ-1630">game</a>.
+              I enjoy volleyball & basketball and games.
               <br />
               <br />
             </p>

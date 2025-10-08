@@ -42,7 +42,7 @@ const CarouselSection = () => {
           <h2 className="text-2xl font-semibold mb-4">I try to come up with more ideas for the website</h2>
           <div className="prose max-w-none">
             <p className="text-[#6B6B6B]">
-              memes I like from 2025: artists who can sing vs artists who can't sing; my name is david dad, I want some icecream; the lion; the gorilla.
+              memes I like from 2025: artists who can sing vs artists who can't sing; my name is david dad, I want some icecream; the lion; the gorilla; please speed I need this; stop sign??.
             </p>
           </div>
         </div>
