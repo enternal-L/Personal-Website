@@ -25,8 +25,10 @@ const BackgroundSection = () => {
               I'm passionate about low-level software & systems.
               <br />
               <br />
-              Currently working with <a className='underline font-bold' target="_blank" href= "https://ners.engin.umich.edu">NERS</a> to build their radiation data pipeline.
+              I will be joining <a className='underline font-bold' target="_blank" href= "https://shv.com/">Sutter Hill's</a> codepoint fellowship, class of 26-27.
               <br />
+              <br />
+              Currently working with <a className='underline font-bold' target="_blank" href= "https://ners.engin.umich.edu">NERS</a> to build their radiation data pipeline.
               <br />
               Interned at <a className='underline font-bold' target="_blank" href= "https://www.nutanix.com/">Nutanix</a>. 
               Wrote C++ at the <a className="underline font-bold" target="_blank" href="https://sites.google.com/umich.edu/umdbi/home">UMDBI Lab</a>.
