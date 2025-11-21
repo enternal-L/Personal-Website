@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BackgroundSection from './BackgroundSection';
-import ProjectsSection from './ProjectsSection';
 import TimelineSection from './TimelineSection';
 
 const CustomArrow = ({ direction, onClick }) => (
@@ -36,7 +35,6 @@ const CarouselSection = () => {
     <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8 relative w-full h-full">
       <Slider {...carouselSettings}>
         <BackgroundSection />
-        <ProjectsSection />
         <TimelineSection />
         <div className="p-8">
           <h2 className="text-2xl font-semibold mb-4">I try to come up with more ideas for the website</h2>
