@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaRegFile, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
 import FoxyImg from '../assets/images/foxy.jpeg';
-import SkeletonImg from '../assets/images/skeleton.png';
+import SkeletonImg from '../assets/images/Skeleton.png';
 import mich_logo from '../assets/images/um_logo.svg'
 
 const SocialFooter = ( {effectArray, setEffect} ) => {
