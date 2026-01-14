@@ -13,7 +13,7 @@ const Header = ({ effectArray, setEffect }) => {
   }, []);
 
   return (
-    <div className={`mb-8 flex flex-row gap-8 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+    <div className={`mb-8 flex flex-row justify-between gap-8 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
       <img 
         src={profile} 
         className="w-24 h-24 object-cover rounded-full"

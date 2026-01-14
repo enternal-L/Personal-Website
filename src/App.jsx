@@ -40,8 +40,8 @@ const App = () => {
   }, [effectArray]);
 
   return (
-    <div className="min-h-screen bg-[#ffffff] text-[#37352f]">
-      <div className="max-w-6xl mx-auto px-10 py-8 m-80">
+    <div className="h-screen bg-[#ffffff] text-[#37352f] w-full">
+      <div className="h-full max-w-6xl mx-auto px-10 py-72">
         <Header effectArray={effectArray} setEffect={setEffect} />
 
         {/* for each effect, if effect is active */}
