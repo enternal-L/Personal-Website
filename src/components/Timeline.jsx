@@ -1,41 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import walls from '../assets/images/Unilver.png';
+import React, { useEffect, useRef } from 'react';
 import ummed from '../assets/images/um_logo.png';
-import ddx from '../assets/images/ddx.jpg';
 import nutanix from '../assets/images/nutanix.png'
+import viam from '../assets/images/viam.jpg'
 
-const TimelineSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const TimelineSection = ({animationFired, setAnimationFired}) => {
 
-  useEffect(() => {
-    // Trigger animation after component mounts
-    setIsVisible(true);
-  }, []);
+    const elementRef = useRef(null);
+
+    useEffect(() => {
+
+        const element = elementRef.current;
+
+        const handleAnimationEnd = () => {
+            setAnimationFired(prev => prev.map((val, index) => index === 1 ? true : val))
+        };
+
+        element.addEventListener('animationend', handleAnimationEnd);
+        
+          return () => {
+            element.removeEventListener('animationend', handleAnimationEnd);
+        };
+    }, [setAnimationFired]);
 
   const timelineData = [
-    {
-      year: '2018-2021',
-      company: "Wall's Ice Cream, Unilever",
-      position: 'Data Analyst Intern',
-      image: walls,
-      link: 'https://www.unilever.com/brands/ice-cream/walls/',
-      description: 'Studied and optimized supply chain processes'
-    },
-    {
-      year: '2022',
-      company: 'Delta Dynamics (DDX)',
-      position: 'Web Developer Intern',
-      image: ddx,
-      link: 'https://www.ddxtransformation.com/',
-      description: 'Developed mockup of BMW financial website'
-    },
     {
       year: '2024-2025',
       company: 'UMDBI Lab',
       position: 'Undergraduate Researcher Assistant',
       image: ummed,
       link: 'https://sites.google.com/umich.edu/umdbi/home',
-      description: 'Wrote Brain-Computer Interfaces (BCI) software for people to communicate via brain signals'
+      description: 'Wrote Brain-Computer Interfaces (BCI) software for people to communicate via brain signals',
+      width: 12,
+      height: 12
     },
     {
       year: '2025',
@@ -43,27 +39,39 @@ const TimelineSection = () => {
       position: 'Member of Technical Staff (Intern)',
       image: nutanix,
       link: 'https://www.nutanix.com/',
-      description: 'Implemented async I/O into core file server'
+      description: 'Implemented async I/O into core file server',
+      width: 12,
+      height: 12
+    },
+    {
+      year: '2026',
+      company: 'Viam',
+      position: 'Software Engineer Intern',
+      image: viam,
+      link: 'https://www.viam.com/',
+      description: 'Incoming',
+      width: 20,
+      height: 12
     }
   ];
 
   return (
-    <div className="p-8">
-      <h2 className="text-2xl font-semibold mb-8">I try to write software</h2>
-      <div className="relative">
+    <div className="w-full h-full p-8">
+      <div className="w-full h-full relative">
         {/* Timeline line */}
-        <div className="absolute top-[71px] left-0 right-0 h-0.5 bg-notion-default"></div>
+        <div className="absolute top-[71px] w-full left-0 right-0 h-0.5 bg-notion-default"></div>
         
         {/* Timeline items */}
         <div className="flex justify-between relative">
           {timelineData.map((item, index) => (
             <div 
+              ref = {elementRef}
               key={index} 
-              className={`relative flex flex-col w-full items-center ${isVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-[-20px]'}`}
+              className={`relative flex flex-col w-full items-center ${!animationFired[1] ? 'animate-fade-in-left opacity-0' : 'opacity-1'}`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Company Logo */}
-              <div className="w-12 h-12 rounded-full overflow-hidden mb-2">
+              <div className={`w-${item.width} h-${item.height} overflow-hidden mb-2`}>
                 <a href = {item.link} target="_blank">
                     <img 
                     src={item.image} 

@@ -8,3 +8,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+
+// I want to make a wikipedia themed website, I know it's basic, but I like the aesthetic
