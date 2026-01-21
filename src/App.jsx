@@ -6,9 +6,8 @@ import './App.css';
 import Header from './components/Header';
 import FoxyGif from './assets/images/foxy-jumpscare.gif';
 import SkeletonGif from './assets/images/skeleton-run.gif'
-import SocialFooter from './components/SocialFooter';
 
-const EFFECT_DURATION = 800; // ms the GIF stays visible
+const EFFECT_DURATION = 850; // ms the GIF stays visible
 
 const App = () => {
 
@@ -49,7 +48,7 @@ const App = () => {
           effectArray[effectKey] && (
             <div key={effectKey} className="pointer-events-none fixed inset-0 z-[9999]">
               <img
-                src={effectSources[effectKey]}
+                src={`${effectSources[effectKey]}?t=${Date.now()}`}
                 alt={effectKey}
                 className="w-full h-full object-cover"
               />

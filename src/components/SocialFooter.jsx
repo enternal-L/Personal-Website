@@ -5,6 +5,8 @@ import FoxyImg from '../assets/images/foxy.jpeg';
 import SkeletonImg from '../assets/images/Skeleton.png';
 import mich_logo from '../assets/images/um_logo.svg'
 
+const DELAY_DURATION = 870;
+
 const SocialFooter = ( {effectArray, setEffect} ) => {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
@@ -57,15 +59,15 @@ const SocialFooter = ( {effectArray, setEffect} ) => {
       <button
         onClick={() => setIsRevealed(!isRevealed)}
         className={`text-[#37352f] -translate-y-1 transition-all duration-200 focus:outline-none
-          ${isRevealed ? 'hover:-translate-x-1' : 'hover:translate-x-1'}
+          ${isRevealed ? 'hover:translate-x-1' : 'hover:-translate-x-1'}
           `
         }
         aria-label="Toggle effects"
       >
         {isRevealed ? (
-          <FaChevronLeft size={23} className="transition-all duration-300" />
-        ) : (
           <FaChevronRight size={23} className="transition-all duration-300" />
+        ) : (
+          <FaChevronLeft size={23} className="transition-all duration-300" />
         )}
       </button>
 
