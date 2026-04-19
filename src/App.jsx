@@ -17,6 +17,17 @@ const App = () => {
     'skeleton': false
   });
 
+  // temp visibility state for p tag
+  const [isVisible, setIsVisible] = useState(false);
+
+  // p tag comes in later
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setIsVisible(true);
+    }, 950); 
+    return () => clearTimeout(id);
+  }, []);
+
   const effectSources = {
     foxy: FoxyGif,
     skeleton: SkeletonGif,
@@ -43,7 +54,7 @@ const App = () => {
       <div className="h-full max-w-6xl mx-auto px-10 py-72">
         <Header effectArray={effectArray} setEffect={setEffect} />
 
-        <p>For EECS 498: <a className='underline' target="_blank" href='https://youtu.be/wqcgjaeJGDM'>Jira (not the ticket)</a>; made with C++, Typescript, Lua, Emscripten, GLM, LuaBridge, SDL, Box2D</p>
+        <p className={`${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`} >For EECS 498: <a className='underline' target="_blank" href='https://youtu.be/wqcgjaeJGDM'>Jira (not the ticket)</a>; made with C++, Typescript, Lua, Emscripten, GLM, LuaBridge, SDL, Box2D</p>
 
         {/* for each effect, if effect is active */}
         {Object.keys(effectArray).map(effectKey => 
