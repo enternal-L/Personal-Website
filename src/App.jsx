@@ -7,7 +7,7 @@ import Header from './components/Header';
 import FoxyGif from './assets/images/foxy-jumpscare.gif';
 import SkeletonGif from './assets/images/skeleton-run.gif'
 
-const EFFECT_DURATION = 850; // ms the GIF stays visible
+const EFFECT_DURATION = 900; // ms the GIF stays visible
 
 const App = () => {
 
@@ -42,6 +42,8 @@ const App = () => {
     <div className="h-screen bg-[#ffffff] text-[#37352f] w-full">
       <div className="h-full max-w-6xl mx-auto px-10 py-72">
         <Header effectArray={effectArray} setEffect={setEffect} />
+
+        <p>For EECS 498: <a className='underline' target="_blank" href='https://youtu.be/wqcgjaeJGDM'>Jira (not the ticket)</a>; made with C++, Typescript, Lua, Emscripten, GLM, LuaBridge, SDL, Box2D</p>
 
         {/* for each effect, if effect is active */}
         {Object.keys(effectArray).map(effectKey => 
