@@ -4,193 +4,716 @@
 
 @layer base {
   html, body {
-    @apply font-sans antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+      'Helvetica Neue', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     width: 100%;
     margin: 0;
     padding: 0;
   }
 }
 
-/* Remove focus outlines */
 button:focus,
 a:focus {
   outline: none !important;
-}
-
-/* Carousel customization */
-.carousel-container {
-  position: relative;
-  overflow: visible !important; /* Ensure arrows outside container are visible */
-}
-
-/* Ensure parent containers don't clip the arrows */
-.bg-white.rounded-lg.shadow-lg.overflow-hidden {
-  overflow: visible !important;
-}
-
-/* Notion-like transitions */
-.transition-colors {
-  transition: all 0.2s ease;
-}
-
-/* Custom container width */
-.max-w-6xl {
-  max-width: 72rem;
-}
-
-/* Carousel slide transitions */
-.slick-slide {
-  transition: opacity 0.3s ease;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Reveal panel animations */
-@keyframes revealPanel {
-  0% {
-    max-width: 0;
-    opacity: 0;
-    transform: translateX(-16px);
-  }
-  100% {
-    max-width: 200px;
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.reveal-panel {
-  animation: revealPanel 0.5s ease-in-out forwards;
-}
-
-/* Exit animations */
-@keyframes exitPanel {
-  0% {
-    max-width: 200px;
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    max-width: 0;
-    opacity: 0;
-    transform: translateX(-16px);
-  }
-}
-
-.exit-panel {
-  animation: exitPanel 0.5s ease-in-out forwards;
-}
-
-/* Hover effects for reveal buttons - use scale since transform is already used by animation */
-.reveal-button-1,
-.reveal-button-2 {
-  transition: transform 0.3s ease-in-out !important;
-}
-
-.reveal-button-1:hover,
-.reveal-button-2:hover {
-  transform: translateX(0) translateY(9px) !important;
-}
-
-/* for video editing section */
-
-.select-highlight-color {
-
-}
-
-.timeline-bg-color {
-
-}
-
-.timeline-text-color {
-  color: #9b9b9b;
-}
-
-@keyframes shadowFadeIn {
-  0% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
-}
-
-.animated-shadow {
-  animation: shadowFadeIn 1s ease-out forwards;
-  animation-delay: 1s;
-}
-
-@keyframes contentFadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-.content-fade-in {
-  animation: contentFadeIn 1s ease-out forwards;
-  animation-delay: 1s;
-}
-
-/* Infinite tape animation */
-@keyframes scrollTape {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.infinite-tape {
-  animation: scrollTape 30s linear infinite;
-}
-
-/* Custom scrollbar styling */
-.custom-scrollbar {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 8px;
-  outline: none;
-}
-
-.custom-scrollbar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #6b6b6b;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.custom-scrollbar::-webkit-slider-thumb:hover {
-  background: #37352f;
-}
-
-.custom-scrollbar::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #6b6b6b;
-  cursor: pointer;
+/* macOS desktop icon */
+.mac-icon-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background: transparent;
   border: none;
-  transition: background 0.2s;
+  cursor: default;
 }
 
-.custom-scrollbar::-moz-range-thumb:hover {
-  background: #37352f;
+.mac-icon-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: transparent;
+  box-sizing: border-box;
 }
 
-.infinite-tape:hover {
-  animation-play-state: paused;
+.mac-icon-image-selected {
+  background: rgba(0, 72, 160, 0.5);
+  box-shadow: inset 0 0 0 1.8px rgba(255, 255, 255, 0.45);
+  outline: 1px solid rgba(80, 140, 220, 0.35);
+  outline-offset: -1px;
+}
+
+.mac-icon-image-pressed {
+  background: rgba(0, 72, 160, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  outline: 1px solid rgba(80, 140, 220, 0.45);
+  outline-offset: -1px;
+}
+
+.mac-icon-image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mac-icon-image-sm {
+  width: 48px;
+  height: 48px;
+}
+
+.mac-icon-label {
+  margin-top: 6px;
+  max-width: 96px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue',
+    system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 13px;
+  text-align: center;
+  word-break: break-word;
+  pointer-events: none;
+}
+
+.mac-icon-label-light {
+  color: #000000;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.9),
+    0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.mac-icon-label-dark {
+  color: #ffffff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.8),
+    0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.mac-icon-label-selected {
+  background: #1b6fdb;
+  color: #ffffff;
+  text-shadow: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+/* macOS Notes document */
+.notes-document {
+  width: 100%;
+  max-width: 680px;
+}
+
+.notes-content {
+  width: 100%;
+}
+
+.notes-date {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #8e8e93;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notes-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.notes-body {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.notes-body strong {
+  font-weight: 600;
+}
+
+.notes-list {
+  list-style: none;
+  margin-top: 4px;
+  padding-left: 0;
+}
+
+.notes-list li {
+  position: relative;
+  padding-left: 1.1em;
+  margin-bottom: 6px;
+}
+
+.notes-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+}
+
+.notes-link {
+  color: #ffd60a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* .notes-link:hover {
+  color: #FCB825;
+} */
+
+.notes-link-placeholder {
+  cursor: default;
+}
+
+.notes-body-last {
+  margin-bottom: 0;
+}
+
+.notes-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.notes-footer-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.notes-footer .notes-body {
+  margin-bottom: 14px;
+}
+
+.notes-image-slot {
+  flex-shrink: 0;
+  line-height: 0;
+  align-self: flex-end;
+}
+
+.notes-image {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.notes-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.notes-contact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0;
+}
+
+.notes-contact-link {
+  color: #ffffff;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.notes-contact-link:hover {
+  opacity: 1;
+}
+
+
+/* Experience — monochrome resume list */
+.experience-document {
+  position: relative;
+  width: 100%;
+  padding-bottom: 64px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.experience-content-shell {
+  max-width: 640px;
+}
+
+.experience-toolbar-chrome {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.experience-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.experience-body {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.experience-more-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  user-select: none;
+}
+
+.experience-more-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.experience-checkbox {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.experience-more-toggle input:checked + .experience-checkbox {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.92);
+}
+
+.experience-more-toggle input:checked + .experience-checkbox::after {
+  content: '';
+  width: 3px;
+  height: 6px;
+  border-right: 1.5px solid #1c1c1e;
+  border-bottom: 1.5px solid #1c1c1e;
+  transform: rotate(45deg) translate(-0.5px, -1px);
+}
+
+.experience-resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.15s ease;
+}
+
+.experience-resume-link:hover {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.experience-section {
+  margin-bottom: 12px;
+}
+
+.experience-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0 28px;
+}
+
+.experience-section:first-child .experience-section-divider {
+  margin-top: 0;
+}
+
+.experience-section-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.experience-section-divider-label {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.experience-role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.experience-role {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.experience-role-logo-slot {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-role-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.experience-role-logo-link:hover {
+  opacity: 0.8;
+}
+
+.experience-role-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.experience-role-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+[data-system-theme='dark'] .company-logo-adaptive img {
+  filter: brightness(0) invert(1);
+}
+
+[data-system-theme='light'] .company-logo-adaptive img {
+  filter: none;
+}
+
+.experience-role-logo-empty {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.experience-role-logo-empty span {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.experience-role-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-role-line {
+  margin: 0 0 4px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.experience-role-company {
+  font-weight: 700;
+}
+
+.experience-role-position {
+  font-weight: 400;
+}
+
+.experience-role-sep {
+  margin: 0 0.35em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.experience-role-detail {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.experience-role-paragraph {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.62);
+  min-height: 4.95em;
+}
+
+.experience-inline-link {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.experience-before-text {
+  margin: 0;
+}
+
+.experience-before-text p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.experience-before-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+.experience-link {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+}
+
+.experience-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.experience-link-placeholder {
+  cursor: default;
+}
+
+/* ─── Content region ─────────────────────────────────────────────────────── */
+/* Single container whose insets only depend on mobile vs desktop. Each page
+   component owns its own layout (centering, scroll, padding) via its root class. */
+
+.content-area {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* Generic centered, scrollable document page (about, experience). */
+.page-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  padding: 48px 32px 112px;
+  box-sizing: border-box;
+}
+
+/* ─── Top placeholder links ──────────────────────────────────────────────── */
+
+.top-links {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-links-caption {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.top-links-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.top-link {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.28);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.top-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+[data-system-theme='light'] .top-links-caption {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+[data-system-theme='light'] .top-link {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+[data-system-theme='light'] .top-link:hover {
+  color: #000000;
+}
+
+/* ─── Corners ───────────────────────────────────────────────────────────── */
+
+.corners-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.corners-widget {
+  width: 100%;
+  max-width: 520px;
+}
+
+.corners-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.28);
+  margin: 0 0 20px;
+}
+
+.corners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.corners-item {
+  display: block;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+}
+
+.corners-item-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.corners-item-title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.corners-item--nolink {
+  cursor: default;
+}
+
+.corners-item-title {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.corners-item-sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.corners-item-note {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ─── Videos collage ─────────────────────────────────────────────────────── */
+
+/* Flex column that oversees both the header text and the photo collage so
+   the two share vertical space cleanly: the header keeps its intrinsic size
+   (flex-shrink: 0) while the collage takes the rest and stays centered. */
+.collage-page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 48px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* The body is the scroll container. The grid is top-aligned (flex-start) so
+   the gap below the header stays constant regardless of viewport height,
+   and the photos can never overflow upward into the header text. */
+.collage-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.collage-grid {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+}
+
+.collage-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.collage-cell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: default;
+  text-decoration: none;
+  display: block;
+  flex-shrink: 0;
+}
+
+.collage-cell--link {
+  cursor: pointer;
+}
+
+.collage-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* On mobile the icons are pinned near the top of the viewport, so reserve
+   space at the top of each page's scroll area to keep content clear. */
+@media (max-width: 767px) {
+  .collage-page,
+  .page-scroll,
+  .corners-page {
+    padding-top: 144px;
+  }
 }
