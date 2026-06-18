@@ -40,7 +40,7 @@ const About = () => {
             <li>affinity for non-racket sports ~ volleyball, basketball</li>
             <li>
               I&apos;ve built more than 20 plastic models ~ my{' '}
-              <NotesLink href="">favourites</NotesLink>
+              <NotesLink href="https://www.usagundamstore.com/products/snaa-1-144-06-the-round-table-knights-sc-002-titan-greatsword-tristan?srsltid=AfmBOooN44qD-NHZ8y9UaJHuIvnckr4-3tNNLbgmR_Inrt7urnQknyVY">most recent</NotesLink>
             </li>
             <li>
               I love collecting reaction images for the right occasion ~ ones I used on my{' '}
@@ -57,13 +57,13 @@ const About = () => {
               <strong>Readings</strong>
               <ul className="notes-list">
                 <li>
-                  <NotesLink href="https://weebcentral.com/series/01J76XYGGM22WZP7T4TKA4ZFAF/Kagurabachi">Kagurabachi</NotesLink>
+                  <NotesLink href="https://weebcentral.com/series/01J76XYGGM22WZP7T4TKA4ZFAF/Kagurabachi">Magical swords</NotesLink>
                 </li>
                 <li>
                   <NotesLink href="https://govleaders.org/completed-staff-work.php">How to be a better engineer</NotesLink>
                 </li>
                 <li>
-                  <NotesLink href="">essay 2</NotesLink>
+                  <NotesLink href="https://www.amazon.com/What-Can-Do-When-Grow/dp/1912891204">A question we all asked ourselves</NotesLink>
                 </li>
               </ul>
             </div>
