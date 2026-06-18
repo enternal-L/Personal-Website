@@ -33,7 +33,7 @@ export const videosContent = [
     title: 'fall break',
     src: fall,
     aspectRatio: 1.667,
-    url: 'https://www.youtube.com/@enternal0070/',
+    url: 'https://youtu.be/AIgIT8DoOSA?si=o3jzatZCXv-OrxJy',
   },
   {
     title: 'v1',
@@ -45,19 +45,19 @@ export const videosContent = [
     title: 'summer',
     src: summer,
     aspectRatio: 1.25,
-    url: 'https://www.instagram.com/p/DOOg8OzEXT4/'
+    url: 'https://youtu.be/V2nvEYtwOcs?si=y0V1TVkES-WGgsoW'
   },
   {
     title: 'mm',
     src: mm,
     aspectRatio: 1.667,
-    url: 'https://www.instagram.com/p/DOOg8OzEXT4/'
+    url: 'https://youtu.be/3o2vF-bXeKU?si=ovcT2SeiSiQEa-t7'
   },
   {
     title: 'nontok',
     src: nontok,
     aspectRatio: 1.25,
-    url: 'https://www.instagram.com/p/DOOg8OzEXT4/'
+    url: 'https://youtu.be/amiMONxGQ8U?si=qk9bQthf24lihNkA'
   }
 ];
 
